@@ -13,13 +13,13 @@
 - [x] CSV/Excel/ZIP file integrity checked; no unreported credential in project files.
 - [x] Power BI DAX and build guide plus static preview included.
 - [ ] Native Power BI `.pbix` is not included: Power BI Desktop/service is unavailable in this environment. Static PNG is explicitly not represented as an interactive dashboard.
-- [ ] Remote GitHub repository/asset links verified only after push; record the actual URLs below.
+- [x] Public repository created and pushed to `main`; repository page and Word report, notebook, dataset ZIP, visualization ZIP, README, and SQL source URLs all returned HTTP 200. No commit URL is fabricated.
 
 ## Deliverables and current remote status
-Repo: Pending verified upload.
-Report: `reports/Data_Science_Tool_Mastery_Report.docx`
-Executed notebook: `notebooks/Data_Science_Tool_Mastery.ipynb`
-Dataset package: `datasets/retail_analytics_data.zip`
-Visualization package: `visualizations/visualizations.zip`
+Repo: https://github.com/appureddy1102-cloud/Data-Science-Tool-Mastery
+Report: https://raw.githubusercontent.com/appureddy1102-cloud/Data-Science-Tool-Mastery/main/reports/Data_Science_Tool_Mastery_Report.docx
+Executed notebook: https://raw.githubusercontent.com/appureddy1102-cloud/Data-Science-Tool-Mastery/main/notebooks/Data_Science_Tool_Mastery.ipynb
+Dataset package: https://raw.githubusercontent.com/appureddy1102-cloud/Data-Science-Tool-Mastery/main/datasets/retail_analytics_data.zip
+Visualization package: https://raw.githubusercontent.com/appureddy1102-cloud/Data-Science-Tool-Mastery/main/visualizations/visualizations.zip
 
 A missing PBIX is a platform-capability limitation, not a fabricated deliverable. SQL is statically parsed but should also be executed in MySQL Workbench locally.
