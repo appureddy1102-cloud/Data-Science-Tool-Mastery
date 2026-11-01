@@ -1,0 +1,26 @@
+{
+  "Quantity": {
+    "q1": 1.0,
+    "q3": 10.0,
+    "lower_fence": -12.5,
+    "upper_fence": 23.5,
+    "flagged_rows": 58501,
+    "policy": "flag only; retain valid extremes"
+  },
+  "UnitPrice": {
+    "q1": 1.25,
+    "q3": 4.13,
+    "lower_fence": -3.0700000000000003,
+    "upper_fence": 8.45,
+    "flagged_rows": 39450,
+    "policy": "flag only; retain valid extremes"
+  },
+  "LineRevenue": {
+    "q1": 3.75,
+    "q3": 17.4,
+    "lower_fence": -16.724999999999998,
+    "upper_fence": 37.875,
+    "flagged_rows": 45626,
+    "policy": "flag only; retain valid extremes"
+  }
+}

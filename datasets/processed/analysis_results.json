@@ -1,0 +1,61 @@
+{
+  "source": "UCI Online Retail",
+  "raw_rows": 541909,
+  "raw_columns": 8,
+  "clean_rows": 536641,
+  "duplicate_rows_removed": 5268,
+  "clean_missing_customer_id": 135037,
+  "clean_missing_description_filled": 1454,
+  "sales_rows": 524878,
+  "cancellation_rows_retained_clean_table": 9251,
+  "sales_start": "2010-12-01 08:26:00",
+  "sales_end": "2011-12-09 12:50:00",
+  "unique_customers_nonnull": 4338,
+  "countries": 38,
+  "sales_revenue_gbp": 10642110.8,
+  "order_count": 19960,
+  "unit_count": 5572420,
+  "daily_mean_revenue": 28454.84,
+  "top_countries": {
+    "United Kingdom": 9001744.09,
+    "Netherlands": 285446.34,
+    "Eire": 283140.52,
+    "Germany": 228678.4,
+    "France": 209625.37,
+    "Australia": 138453.81,
+    "Spain": 61558.56,
+    "Switzerland": 57067.6,
+    "Belgium": 41196.34,
+    "Sweden": 38367.83
+  },
+  "top_products": {
+    "DOTCOM POSTAGE": 206248.77,
+    "REGENCY CAKESTAND 3 TIER": 174156.54,
+    "PAPER CRAFT , LITTLE BIRDIE": 168469.6,
+    "WHITE HANGING HEART T-LIGHT HOLDER": 106236.72,
+    "PARTY BUNTING": 99445.23,
+    "JUMBO BAG RED RETROSPOT": 94159.81,
+    "MEDIUM CERAMIC TOP STORAGE JAR": 81700.92,
+    "POSTAGE": 78101.88,
+    "MANUAL": 77752.82,
+    "RABBIT NIGHT LIGHT": 66870.03
+  },
+  "top_country_share_pct": 84.59,
+  "test_days": 70,
+  "forecast_metrics": {
+    "MAE_GBP": 16429.54,
+    "RMSE_GBP": 26809.95,
+    "R2": 0.2778,
+    "weekly_naive_MAE_GBP": 14165.99,
+    "baseline_RMSE_GBP": 24334.25,
+    "train_end": "2011-09-30",
+    "test_start": "2011-10-01"
+  },
+  "customer_summary": {
+    "customers": 4338,
+    "median_revenue": 668.57,
+    "mean_orders": 4.27,
+    "repeat_customer_share_pct": 65.58,
+    "pearson_orders_revenue_r": 0.5528
+  }
+}

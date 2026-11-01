@@ -1,0 +1,48 @@
+{
+  "raw_shape": [
+    541909,
+    8
+  ],
+  "raw_missing": {
+    "InvoiceNo": 0,
+    "StockCode": 0,
+    "Description": 1454,
+    "Quantity": 0,
+    "InvoiceDate": 0,
+    "UnitPrice": 0,
+    "CustomerID": 135080,
+    "Country": 0
+  },
+  "raw_duplicates": 5268,
+  "raw_types": {
+    "InvoiceNo": "object",
+    "StockCode": "object",
+    "Description": "object",
+    "Quantity": "int64",
+    "InvoiceDate": "datetime64[ns]",
+    "UnitPrice": "float64",
+    "CustomerID": "float64",
+    "Country": "object"
+  },
+  "clean_shape": [
+    536641,
+    11
+  ],
+  "clean_missing": {
+    "InvoiceNo": 0,
+    "StockCode": 0,
+    "Description": 0,
+    "Quantity": 0,
+    "InvoiceDate": 0,
+    "UnitPrice": 0,
+    "CustomerID": 135037,
+    "Country": 0,
+    "IsCancellation": 0,
+    "LineRevenue": 0,
+    "Date": 0
+  },
+  "sales_rows": 524878,
+  "clean_duplicate_rows": 0,
+  "dropped_exact_duplicates": 5268,
+  "outlier_policy": "Revenue outliers retained in analysis; charts cap display range only. Returns/cancellations retained in audit-clean table but excluded from positive-sales forecasting."
+}

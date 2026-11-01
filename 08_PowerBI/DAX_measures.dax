@@ -1,0 +1,14 @@
+-- Import datasets/processed/online_retail_clean.csv as table Retail.
+-- Build relationships/slicers using Date (created in Power Query), Country, and Description.
+Gross Sales GBP = CALCULATE(SUM(Retail[LineRevenue]), Retail[IsCancellation] = FALSE(), Retail[Quantity] > 0, Retail[UnitPrice] > 0)
+Order Count = CALCULATE(DISTINCTCOUNT(Retail[InvoiceNo]), Retail[IsCancellation] = FALSE(), Retail[Quantity] > 0)
+Units Sold = CALCULATE(SUM(Retail[Quantity]), Retail[IsCancellation] = FALSE(), Retail[Quantity] > 0)
+Identified Customers = CALCULATE(DISTINCTCOUNT(Retail[CustomerID]), NOT(ISBLANK(Retail[CustomerID])), Retail[IsCancellation] = FALSE())
+Repeat Customers = COUNTROWS(FILTER(VALUES(Retail[CustomerID]), NOT(ISBLANK(Retail[CustomerID])) && CALCULATE(DISTINCTCOUNT(Retail[InvoiceNo]), Retail[IsCancellation] = FALSE(), Retail[Quantity] > 0) > 1))
+Repeat Customer Rate = DIVIDE([Repeat Customers], [Identified Customers])
+Average Order Value = DIVIDE([Gross Sales GBP], [Order Count])
+Sales per Identified Customer = DIVIDE([Gross Sales GBP], [Identified Customers])
+Cancellation Invoice Count = CALCULATE(DISTINCTCOUNT(Retail[InvoiceNo]), Retail[IsCancellation] = TRUE())
+Sales MoM Change = [Gross Sales GBP] - CALCULATE([Gross Sales GBP], DATEADD('Calendar'[Date],-1,MONTH))
+Sales MoM % = DIVIDE([Sales MoM Change], CALCULATE([Gross Sales GBP], DATEADD('Calendar'[Date],-1,MONTH)))
+Gross Margin = BLANK() -- cost data absent: do not invent margin.
